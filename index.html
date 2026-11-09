@@ -10,15 +10,77 @@
 /* One-question-at-a-time, independent of full-exam records */
 .topic-top-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:20px}.topic-label{display:block;font-size:14px;font-weight:800;margin-bottom:10px}.topic-checks{display:flex;gap:8px;flex-wrap:wrap}.topic-check{border:1px solid #d8e5d9;background:#f8fbf7;border-radius:11px;padding:8px 12px;display:inline-flex;gap:7px;align-items:center;font-size:13px;cursor:pointer}.topic-check:has(input:checked){background:#e0f2e9;border-color:#8fbdaa}.topic-check input{accent-color:#246c58}.topic-workspace{display:grid;grid-template-columns:minmax(0,2fr) minmax(250px,.8fr);align-items:start;gap:16px}.topic-question-top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:15px}#topicQuestionTitle{font-size:clamp(19px,2.5vw,25px);line-height:1.7;margin:15px 0}.topic-choices{display:grid;gap:10px}.topic-option{border:1px solid #d9e5db;border-radius:12px;background:#fbfdf9;padding:13px;display:flex;align-items:start;gap:12px;cursor:pointer;min-height:48px}.topic-option:has(input:checked){background:#e6f4eb;border-color:#60aa83}.topic-option input{accent-color:#236b57;margin:4px 0 0}.topic-option span{line-height:1.6}.topic-feedback{padding:15px 17px;background:#edf5ea;border-radius:12px;margin-top:20px;line-height:1.75}.topic-feedback.bad{background:#fff2e8}.topic-feedback p{margin:5px 0}.topic-sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:10px}.topic-source-card{border:1px solid #dfeadd;border-radius:13px;padding:14px;background:#fbfdf9}.topic-source-card b{display:block;margin-bottom:6px}.topic-source-card a{display:inline-block;margin-top:9px;font-size:13px;font-weight:700}.topic-source-card .muted{font-size:12px;margin:0}
 @media(max-width:760px){.topic-top-grid,.topic-workspace{grid-template-columns:1fr}.topic-checks{gap:6px}.topic-check{padding:9px}.topic-source-card{padding:12px}#topicView .toolbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}#topicView .toolbar .control{min-width:0}#topicView .toolbar select{padding:10px 4px;width:100%;font-size:13px}}
+
+/* GSAT original questions by curricular units */
+.unit-controls{margin:20px 0}.unit-config{display:grid;grid-template-columns:1fr 2fr;gap:18px}.unit-config label{font-weight:700;display:block;margin:0 0 9px}.unit-check-list{display:flex;flex-wrap:wrap;gap:8px}.unit-check{display:flex;gap:8px;align-items:center;padding:10px 12px;border-radius:10px;background:#fafcf9;border:1px solid #d8e5d9;cursor:pointer;font-size:14px}.unit-check:has(input:checked){background:#e1f2e9;border-color:#7bb69b}.unit-check input{accent-color:#226954;margin:0}.unit-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(270px,1fr);gap:18px;align-items:start}.unit-grid .panel{min-width:0}.unit-head{display:flex;justify-content:space-between;gap:8px}.unit-tag{color:#226954;font-size:13px;line-height:1.65}.unit-choice{display:flex;align-items:center;gap:12px;padding:11px 12px;margin:7px 0;border-radius:10px;background:#fafcf9;border:1px solid #dce5dc;cursor:pointer}.unit-choice:has(input:checked){background:#e6f4eb;border-color:#7bb69b}.unit-choice input{width:auto;accent-color:#226954}.unit-input{display:flex;gap:8px;align-items:center;margin:8px 0}.unit-input input{width:90px;max-width:100%;text-align:center}.unit-feedback{padding:14px 16px;border:1px solid #cfe5d6;border-radius:12px;background:#eef8ee;line-height:1.8;margin-top:14px}.unit-feedback.incorrect{background:#fff2eb;border-color:#ecc5b3}.unit-feedback p{margin:6px 0}.unit-side iframe{height:520px}.unit-stat{margin-top:18px;line-height:1.8}.unit-stat .chip{display:inline-block;margin:5px 6px 0 0}.unit-side .paper-links{margin-top:15px}.unit-side .paper-links a{font-size:12px}.unit-grid h3{line-height:1.65}
+@media(max-width:900px){.unit-grid{grid-template-columns:1fr}.unit-side iframe{height:420px}}
+@media(max-width:600px){.unit-config{grid-template-columns:1fr}.unit-check{font-size:12px;padding:9px}.unit-grid .mini-actions{flex-wrap:wrap}.unit-grid .mini-actions button{flex:1 1 auto}.unit-input input{width:80px}}
+
+/* 單題作答：整卷試題仍可計時與交卷，畫面一次只呈現一個答題欄位。 */
+.exam-single-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:14px 0 8px}
+.exam-single-heading h3{margin:5px 0 8px;font-size:clamp(21px,3vw,27px)}
+.exam-single-hint{margin:7px 0 12px;line-height:1.7;color:#657e72}
+.exam-jump{display:flex;align-items:center;gap:12px;margin:14px 0 16px;flex-wrap:wrap}
+.exam-jump label{font-weight:650;white-space:nowrap}
+.exam-jump select{width:auto;min-width:155px;max-width:100%;flex:1}
+.exam-one-answer{overflow:visible!important;max-height:none!important;min-height:145px;padding:12px 0 10px}
+.exam-one-answer .answer-row{padding:12px 4px;border-bottom:0}
+.exam-one-answer .options{flex-wrap:wrap}
+.exam-one-answer .fill-row{margin:10px 0}
+.exam-one-answer .non-row textarea{min-height:190px}
+.exam-one-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.exam-one-actions button{flex:1 1 130px}
+.exam-current-feedback{margin:12px 0;padding:13px 15px;border-radius:12px;background:#edf5eb;border:1px solid #d2e5d7;line-height:1.7}
+.exam-current-feedback.error{background:#fff3ec;border-color:#efccb9}
+.exam-current-feedback strong{display:block;margin-bottom:4px}
+@media(max-width:650px){.exam-one-actions button{flex:1 1 40%}.exam-one-answer .options{gap:7px}.exam-jump{display:block}.exam-jump select{display:block;width:100%;margin-top:7px}}
+@media(max-width:900px){#examSinglePanel{order:1}#pdfPanel{order:2}}
 </style></head><body>
 <header><div class="top"><div class="brand">MATH / 學測數學練習室</div><div class="motto">從歷屆原卷，練出真正的解題能力。</div></div></header>
 <main>
 <div class="eyebrow">GSAT MATH PRACTICE · 108–115</div><h1>把歷屆試題，練成自己的實力。</h1>
 <p class="lead muted">官方原卷 × 線上答題卡 × 自動核對 × 錯題筆記。收錄 108–110 舊制數學、111–115 數學 A／數學 B。</p>
-<nav class="tabs" aria-label="主要功能"><button class="tab active" data-tab="papers">歷屆試卷</button><button class="tab" data-tab="topic">名校段考・單題練習</button><button class="tab" data-tab="mistakes">錯題複習</button><button class="tab" data-tab="stats">成績統計</button><button class="tab" data-tab="guide">使用說明</button></nav>
+<nav class="tabs" aria-label="主要功能"><button class="tab active" data-tab="papers">歷屆試卷</button><button class="tab" data-tab="unit">學測原題・單元抽題</button><button class="tab" data-tab="topic">名校段考・單題練習</button><button class="tab" data-tab="mistakes">錯題複習</button><button class="tab" data-tab="stats">成績統計</button><button class="tab" data-tab="guide">使用說明</button></nav>
 <section id="homeView"><div class="toolbar"><div class="control"><label for="subjectFilter">考科</label><select id="subjectFilter"><option value="A" selected>數學 A（預設）</option><option value="B">數學 B</option><option value="O">舊制數學 108–110</option><option value="all">全部試卷</option></select></div><div class="control"><label for="yearFilter">年度</label><select id="yearFilter"><option value="all">所有年度</option></select></div><span class="muted tiny" id="showing" aria-live="polite"></span></div>
 <div class="section-label"><h2>選擇試卷</h2><span class="chip" id="paperCount">13 份官方試卷</span></div><div class="grid" id="paperList"></div>
 <p class="notice" style="margin-top:19px">試題本與答案均連結至大考中心官方 PDF，本站不是大考中心網站。108–110 年為舊制數學，111 年起才分數學 A／B。這裡的自動批改是「完整答對」判定，不等同正式得分或級分。</p></section>
+
+
+<section id="unitView" class="hidden" aria-label="歷屆學測數學原題單元抽題">
+ <div class="eyebrow">OFFICIAL QUESTIONS / TOPIC DRILL</div>
+ <h2>學測原題・依單元抽題</h2>
+ <p class="muted">從 <strong>111–115 學測數學 A</strong> 的原卷，按學期和單元挑題。一次顯示一個官方題號；從官方 PDF 閱讀題幹，再在網站作答、訂正與複習。</p>
+ <div class="panel unit-controls">
+  <div class="unit-config">
+   <div><label>學期（可複選）</label><div id="unitTerms" class="unit-check-list"></div></div>
+   <div><label>單元（可複選；未勾選表示該學期全部）</label><div id="unitTopics" class="unit-check-list"></div></div>
+  </div>
+  <div class="toolbar" style="margin-top:15px">
+   <div class="control"><label for="unitYear">學測年度</label><select id="unitYear"><option value="all">111–115 全部混合</option><option value="115">115 年</option><option value="114">114 年</option><option value="113">113 年</option><option value="112">112 年</option><option value="111">111 年</option></select></div>
+   <div class="control"><label for="unitOrder">出題方式</label><select id="unitOrder"><option value="order">依年度與題號</option><option value="random">隨機抽題（不重複）</option><option value="wrong">只練曾經答錯的題目</option></select></div>
+  </div>
+  <div class="mini-actions"><button id="unitStart" class="btn primary" type="button">套用單元・開始抽題</button><button id="unitCheckAll" class="btn" type="button">全選學期</button><span class="counter" id="unitTotal">準備載入單元…</span></div>
+ </div>
+ <div class="unit-grid">
+  <article class="panel">
+   <div class="unit-head"><span class="eyebrow" id="unitProgress">尚未開始</span><span class="chip" id="unitConfidence">課綱教學分類</span></div>
+   <h3 id="unitQuestionTitle">選擇單元後即可從歷屆試卷抽題。</h3>
+   <p class="muted" id="unitMeta"></p><p class="unit-tag" id="unitBadge"></p>
+   <div id="unitInputs"></div>
+   <div class="mini-actions"><button id="unitGrade" type="button" class="btn primary">檢查答案</button><button id="unitSkip" type="button" class="btn">不會，顯示答案</button></div>
+   <div id="unitFeedback" class="hidden unit-feedback" role="status"></div>
+   <div class="mini-actions" style="margin-top:15px"><button id="unitPrev" type="button" class="btn">← 上一題</button><button id="unitNext" type="button" class="btn primary">下一題 →</button></div>
+  </article>
+  <aside class="panel unit-side">
+   <h3>官方原卷</h3><p class="muted tiny" id="unitPDFText">從原卷找對應題號；圖片、數學式與題意請以原卷為準。</p>
+   <div class="paper-links"><a id="unitPaperLink" href="#" target="_blank" rel="noopener noreferrer">開啟官方試卷 PDF ↗</a><a id="unitAnswerLink" href="#" target="_blank" rel="noopener noreferrer">官方參考答案 PDF ↗</a></div>
+   <button class="btn" id="unitTogglePdf" type="button" style="margin:15px 0">顯示／隱藏 PDF 預覽</button>
+   <iframe id="unitPdf" class="paper-frame hidden" loading="lazy" title="當年度學測數學A官方試卷"></iframe>
+   <div id="unitSummary" class="unit-stat"></div>
+  </aside>
+ </div>
+ <div class="notice" style="margin-top:20px"><strong>分類與評分界線：</strong>題目和正解來自大考中心原卷與參考答案；單元由<a href="https://www.royalblue-education.com/guides/exam-item-difficulty" target="_blank" rel="noopener noreferrer">第三方 108 課綱對照表</a>整理，不是官方逐題單元標籤。111、115 年部分分類尚待核對。多選題以<strong>全部選項相符</strong>判為答對；選填題須全部欄位相符。本區暫收 111–115 數學 A 第 1～18 題，非選擇題、數學 B 與 108–110 年舊制題的分類尚未收錄，不能視為全部題庫已完成。</div>
+</section>
 
 <section id="topicView" class="hidden" aria-label="單元與名校段考逐題練習">
 <div class="eyebrow">SCHOOL EXAMS / ONE QUESTION AT A TIME</div>
@@ -55,8 +117,14 @@
 <div class="paper-links" id="paperLinks"></div><div class="counts" style="margin-top:15px"><span class="counter" id="answerProgress"></span><span class="counter" id="examStatus"></span><span class="counter" id="autosave">自動儲存至此瀏覽器</span></div><div class="progress"><div id="progressBar" style="width:0"></div></div>
 <div class="mini-actions"><button class="btn" id="timerButton">開始 100 分鐘計時</button><button class="btn" id="resetTimer">重設計時</button><button class="btn" id="togglePDF">隱藏 PDF 預覽</button></div></div>
 <div class="workspace"><div class="panel" id="pdfPanel"><h3>官方原題</h3><p class="muted tiny">數學公式、圖形與題目以官方試卷為準。若 PDF 預覽無法顯示，請按「另開官方試卷」閱讀。</p><iframe id="paperIframe" class="paper-frame" loading="lazy" title="大考中心官方歷屆數學試卷"></iframe><p class="pdf-sub">手機可將官方 PDF 另開分頁，再回到這裡作答。</p></div>
-<div class="panel"><div class="section-label"><h3 style="margin:0">線上答題卡</h3><span class="chip">每次作答自動儲存</span></div><div class="scrollbox" id="answersBox"></div>
-<div class="exam-actions"><button class="btn primary" id="submitBtn">完成並核對答案</button><button class="btn danger" id="clearAnswers">清空本卷重新練</button></div><div class="feedback" id="resultBox"></div></div></div></section>
+<div class="panel" id="examSinglePanel"><div class="section-label"><h3 style="margin:0">逐題作答</h3><span class="chip">自動保存答案</span></div>
+<div class="exam-single-heading"><div><span class="eyebrow" id="examSingleProgress">第 1 / 20 題</span><h3 id="examSingleTitle">準備作答</h3></div><span class="chip" id="examSingleType">單選</span></div>
+<p class="exam-single-hint" id="examSingleHint">依照官方試卷第 1 題作答，題幹與圖形請以 PDF 原卷為準。</p>
+<div class="exam-jump"><label for="examJump">跳至題目</label><select id="examJump" aria-label="選擇要作答的題號"></select></div>
+<div class="exam-one-answer" id="answersBox"></div>
+<div class="exam-current-feedback hidden" id="examCurrentFeedback" role="status" aria-live="polite"></div>
+<div class="exam-one-actions"><button class="btn" id="examPrevQuestion" type="button">← 上一題</button><button class="btn" id="examCheckQuestion" type="button">核對本題答案</button><button class="btn primary" id="examNextQuestion" type="button">下一題 →</button></div>
+<div class="exam-actions"><button class="btn primary" id="submitBtn">整卷完成・核對成績</button><button class="btn danger" id="clearAnswers">清空本卷重新練</button></div><div class="feedback" id="resultBox"></div></div></div></section>
 <section id="mistakesView" class="hidden"><div class="section-label"><h2>錯題複習</h2><span class="chip" id="wrongCount">0 題</span></div><p class="muted">從交卷後「完全答錯的題目」建立複習清單。可為每題記錄不熟的原因、章節與下次要注意的事。</p><div id="mistakesList"></div></section>
 <section id="statsView" class="hidden"><div class="section-label"><h2>學習紀錄</h2><button class="btn" id="exportBtn">匯出 JSON 備份</button></div><div class="stat-grid" id="dashboardStats"></div><div class="panel"><h3>每次作答紀錄</h3><div class="table-wrap"><table class="records"><thead><tr><th>完成日期</th><th>年度考科</th><th>選擇／選填整題全對</th><th>非選題</th><th>操作</th></tr></thead><tbody id="historyBody"></tbody></table></div></div><p class="notice" style="margin-top:16px">成績為本站的「整題完全答對率」，<strong>不是</strong>大考中心換算的正式原始分數或級分。多選題部分給分未套入；非選題須依官方評分原則人工評閱。</p></section>
 <section id="guideView" class="hidden"><div class="panel"><h2>使用方式與計分注意事項</h2><p>選擇年度和考科後，開啟大考中心原題 PDF，對照原試卷選擇第 1～5 個選項。多選題可勾多個選項；選填題依官方答題卷的「列號」分別輸入數字或負號。</p><p>系統會在你交卷時核對單選、多選和選填欄位；多選須選項完全相符才算整題答對。選填題須同題所有欄位相符才算整題答對。正式學測的部分給分規則比較細，這裡**不模擬正式配分**。</p><p>111～115 年數學 A／B 的第 19、20 題屬非選擇題，網站可記錄你的作答思路，但無法自動判分；請參考官方非選題評分原則，核對推導過程。108～110 年為舊制試卷，計分方式和題型與新制不同。</p><p>練習與筆記存在這台裝置目前使用的瀏覽器，若清除瀏覽資料可能遺失。可在成績統計中下載 JSON 備份。沒有帳號、伺服器或資料上傳。</p><div class="divider"></div><h3>官方資料來源</h3><p><a href="https://www.ceec.edu.tw/xmfile?xsmsid=0J052424829869345634" target="_blank" rel="noopener noreferrer">大學入學考試中心｜學測歷年一般試題與答題卷</a></p><p class="muted tiny">本專案為個人學習工具，並未聲稱代表大考中心。若官方更新題目、答案或連結，以官方 PDF 為準。</p></div></section>
@@ -78,7 +146,7 @@ function toast(msg){const t=$('toast');t.textContent=msg;t.classList.remove('hid
 function el(name,attrs={},text){const e=document.createElement(name);for(const [k,v] of Object.entries(attrs)){if(k==='class')e.className=v;else if(k==='disabled')e.disabled=!!v;else if(k==='target')e.target=v;else e.setAttribute(k,v)}if(text!==undefined)e.textContent=text;return e}
 function fmtDate(n){return new Date(n).toLocaleString('zh-TW',{hour12:false})}
 function examTitle(e){return `${e.year} 學年度 · ${e.subject}`}
-function tab(name){activeTab=name;document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));['homeView','examView','mistakesView','statsView','guideView','topicView'].forEach(x=>$(x).classList.add('hidden'));const nameToId={papers:'homeView',mistakes:'mistakesView',stats:'statsView',guide:'guideView',topic:'topicView'};$(nameToId[name]).classList.remove('hidden');if(name==='papers')renderPapers();if(name==='mistakes')renderMistakes();if(name==='stats')renderStats();window.scrollTo(0,0)}
+function tab(name){activeTab=name;document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));['homeView','examView','mistakesView','statsView','guideView','topicView','unitView'].forEach(x=>$(x).classList.add('hidden'));const nameToId={papers:'homeView',mistakes:'mistakesView',stats:'statsView',guide:'guideView',topic:'topicView',unit:'unitView'};$(nameToId[name]).classList.remove('hidden');if(name==='papers')renderPapers();if(name==='mistakes')renderMistakes();if(name==='stats')renderStats();window.scrollTo(0,0)}
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{stopTicker();selectedExam=null;tab(b.dataset.tab)}));
 const years=[...new Set(EXAMS.map(e=>e.year))];for(const y of years)$('yearFilter').append(el('option',{value:y},`${y} 年（${y+1911}）`));
 $('subjectFilter').addEventListener('change',renderPapers);$('yearFilter').addEventListener('change',renderPapers);
@@ -87,19 +155,106 @@ function link(url,label){const a=el('a',{href:url,target:'_blank',rel:'noopener 
 function stopTicker(){if(timerInterval){clearInterval(timerInterval);timerInterval=null}}
 function readSeconds(p){const t=p.timer;if(!t)return 6000;if(!t.running)return Math.max(0,Math.floor(t.seconds));const spent=Math.max(0,Math.floor((Date.now()-t.stamp)/1000));return Math.max(0,t.seconds-spent)}
 function renderTimer(){if(!selectedExam)return;const p=loadPaper(selectedExam.id);const s=readSeconds(p),min=String(Math.floor(s/60)).padStart(2,'0'),sec=String(s%60).padStart(2,'0');$('clock').textContent=min+':'+sec;$('clock').classList.toggle('warn',s<600);$('timerButton').textContent=p.timer.running?'暫停計時':s===6000?'開始 100 分鐘計時':'繼續計時';if(s===0&&p.timer.running){p.timer.seconds=0;p.timer.running=false;save();stopTicker();toast('計時結束，可選擇交卷核對。')};}
-function openExam(id){const e=EXAMS.find(x=>x.id===id);if(!e)return;selectedExam=e;const p=loadPaper(id);['homeView','examView','mistakesView','statsView','guideView'].forEach(v=>$(v).classList.add('hidden'));$('examView').classList.remove('hidden');document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab==='papers'));$('examTitle').textContent=examTitle(e);$('paperLinks').replaceChildren(link(e.paper,'另開官方試卷 PDF ↗'),link(e.answer,'官方選擇（填）題答案 ↗'));if(e.rubric)$('paperLinks').append(link(e.rubric,'非選題參考答案與評分原則 ↗'));$('paperIframe').src=e.paper+'#toolbar=1';$('pdfPanel').classList.remove('hidden');$('togglePDF').textContent='隱藏 PDF 預覽';renderAnswerCard();renderTimer();stopTicker();timerInterval=setInterval(renderTimer,1000);$('examView').scrollIntoView({behavior:'smooth',block:'start'})}
+function openExam(id){const e=EXAMS.find(x=>x.id===id);if(!e)return;selectedExam=e;const p=loadPaper(id);['homeView','examView','mistakesView','statsView','guideView'].forEach(v=>$(v).classList.add('hidden'));$('examView').classList.remove('hidden');document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab==='papers'));$('examTitle').textContent=examTitle(e);$('paperLinks').replaceChildren(link(e.paper,'另開官方試卷 PDF ↗'),link(e.answer,'官方選擇（填）題答案 ↗'));if(e.rubric)$('paperLinks').append(link(e.rubric,'非選題參考答案與評分原則 ↗'));$('paperIframe').src=e.paper+'#toolbar=1';const mobileExam=window.matchMedia&&window.matchMedia('(max-width:900px)').matches;$('pdfPanel').classList.toggle('hidden',!!mobileExam);$('togglePDF').textContent=mobileExam?'顯示 PDF 預覽':'隱藏 PDF 預覽';$('resultBox').replaceChildren();renderAnswerCard();renderTimer();stopTicker();timerInterval=setInterval(renderTimer,1000);$('examView').scrollIntoView({behavior:'smooth',block:'start'})}
 $('backBtn').onclick=()=>{stopTicker();selectedExam=null;$('paperIframe').src='about:blank';tab('papers')};
 $('togglePDF').onclick=()=>{const h=$('pdfPanel').classList.toggle('hidden');$('togglePDF').textContent=h?'顯示 PDF 預覽':'隱藏 PDF 預覽'};
 $('timerButton').onclick=()=>{if(!selectedExam)return;const p=loadPaper(selectedExam.id),t=p.timer;if(t.running){t.seconds=readSeconds(p);t.running=false}else if(t.seconds>0){t.running=true;t.stamp=Date.now()}save();renderTimer()};
 $('resetTimer').onclick=()=>{if(!selectedExam||!confirm('要把本卷計時重設為 100 分鐘嗎？（作答紀錄不受影響）'))return;loadPaper(selectedExam.id).timer={seconds:6000,running:false,stamp:0};save();renderTimer()};
-function writeAns(k,v){if(!selectedExam)return;const p=loadPaper(selectedExam.id);p.answers[k]=v;p.status='draft';p.last=null;save();updateProgress();$('resultBox').replaceChildren()}
+function writeAns(k,v){if(!selectedExam)return;const p=loadPaper(selectedExam.id);p.answers[k]=v;p.status='draft';p.last=null;save();updateProgress();$('resultBox').replaceChildren();$('examCurrentFeedback').classList.add('hidden')}
 function addQuestionRow(container,q,type){const p=loadPaper(selectedExam.id),line=el('div',{class:'answer-row'});line.append(el('div',{class:'no'},String(q)));const options=el('div',{class:'options'});for(let n=1;n<=5;n++){const str=String(n),label=el('label',{class:'opt'}),inp=el('input',{type:type==='single'?'radio':'checkbox',name:type+q,value:str});if(type==='single')inp.checked=(p.answers['s'+q]||'')===str;else inp.checked=(p.answers['m'+q]||'').includes(str);inp.onchange=()=>{if(type==='single'){writeAns('s'+q,str)}else{const checked=[...options.querySelectorAll('input:checked')].map(x=>x.value).sort().join('');writeAns('m'+q,checked)}};label.append(inp,document.createTextNode(str));options.append(label)}line.append(options);container.append(line)}
-function renderAnswerCard(){const e=selectedExam,p=loadPaper(e.id),box=$('answersBox');box.replaceChildren();box.append(el('p',{class:'notice'},'請看左側官方試卷作答。單選只選一個、多選可選多個；選填請按官方答題卷列號輸入。'));
-box.append(el('div',{class:'section-title'},`一、單選題（${e.singleQuestions.length} 題）`));for(const q of e.singleQuestions)addQuestionRow(box,q,'single');box.append(el('div',{class:'section-title'},`二、多選題（${e.multiQuestions.length} 題）`));for(const q of e.multiQuestions)addQuestionRow(box,q,'multi');box.append(el('div',{class:'section-title'},`三、選填題（${e.isOld?'依答題卡列號':'依各題分欄'}）`));const groups=groupKeys(e);for(const [g,keys] of Object.entries(groups)){const wrap=el('div',{class:'panel',style:'padding:12px 15px;margin:10px 0;border-radius:12px'});wrap.append(el('div',{class:'eyebrow'},e.isOld?`選填 ${g} 題`:`第 ${g} 題`));for(const k of keys){const row=el('div',{class:'fill-row'}),label=el('label',{for:'f-'+k},e.isOld?`第 ${k} 列`:`${k} 列`),select=el('select',{class:'fill-picker',id:'f-'+k,'aria-label':`選填 ${k} 列`});select.append(el('option',{value:''},'尚未作答'));for(const v of ['-','±','0','1','2','3','4','5','6','7','8','9'])select.append(el('option',{value:v},v==='-'?'− 負號':v==='±'?'± 正負號':v));select.value=p.answers['f'+k]||'';select.onchange=()=>writeAns('f'+k,select.value);row.append(label,select);wrap.append(row)}box.append(wrap)}
-if(e.nonChoice.length){box.append(el('div',{class:'section-title'},'四、非選擇題（人工評閱）'));for(const q of e.nonChoice){const wrap=el('div',{class:'non-row'});const label=el('label',{for:'n'+q},`第 ${q} 題：解題思路／草稿`);const area=el('textarea',{id:'n'+q,placeholder:'可以寫解題步驟、關鍵公式或之後要補強的地方。正式作答仍以紙筆為準。'});area.value=p.answers['n'+q]||'';area.oninput=()=>writeAns('n'+q,area.value);wrap.append(label,area);box.append(wrap)}}updateProgress();if(p.status==='submitted'&&p.last)renderResult(p.last)}
-function expectedCount(e){return e.singleQuestions.length+e.multiQuestions.length+Object.keys(e.rows).length+e.nonChoice.length}
-function answeredCount(e,p){return e.singleQuestions.filter(q=>p.answers['s'+q]).length+e.multiQuestions.filter(q=>p.answers['m'+q]).length+Object.keys(e.rows).filter(k=>p.answers['f'+k]).length+e.nonChoice.filter(q=>(p.answers['n'+q]||'').trim()).length}
-function updateProgress(){const e=selectedExam,p=loadPaper(e.id),n=answeredCount(e,p),total=expectedCount(e);$('answerProgress').textContent=`已填 ${n} / ${total} 個答題欄位`;$('progressBar').style.width=(100*n/total).toFixed(1)+'%';$('examStatus').textContent=p.status==='submitted'?'已完成核對':'進行中';}
+function examQuestionList(e){
+ const entries=[];
+ e.singleQuestions.forEach(q=>entries.push({type:'single',id:String(q),key:'s'+q,title:`第 ${q} 題`,kind:'單選題'}));
+ e.multiQuestions.forEach(q=>entries.push({type:'multi',id:String(q),key:'m'+q,title:`第 ${q} 題`,kind:'多選題'}));
+ for(const [g,keys] of Object.entries(groupKeys(e)))entries.push({type:'fill',id:g,keys,title:e.isOld?`選填 ${g} 題`:`第 ${g} 題`,kind:'選填題'});
+ e.nonChoice.forEach(q=>entries.push({type:'written',id:String(q),key:'n'+q,title:`第 ${q} 題`,kind:'非選擇題'}));
+ return entries;
+}
+function examQuestionIndex(e){const p=loadPaper(e.id),len=examQuestionList(e).length;
+ return Math.min(Math.max(Number.isInteger(p.questionIndex)?p.questionIndex:0,0),Math.max(0,len-1));
+}
+function renderAnswerCard(){
+ if(!selectedExam)return;
+ const e=selectedExam,p=loadPaper(e.id),qs=examQuestionList(e),pos=examQuestionIndex(e),q=qs[pos],box=$('answersBox');
+ if(!q)return;
+ box.replaceChildren();
+ $('examSingleProgress').textContent=`第 ${pos+1} / ${qs.length} 題`;
+ $('examSingleTitle').textContent=q.title;
+ $('examSingleType').textContent=q.kind;
+ $('examPrevQuestion').disabled=pos===0;
+ $('examNextQuestion').disabled=pos===qs.length-1;
+ $('examNextQuestion').textContent=pos===qs.length-1?'最後一題':'下一題 →';
+ const jump=$('examJump'),saved=String(pos);
+ if(jump.options.length!==qs.length||jump.dataset.paper!==e.id){
+  jump.replaceChildren();qs.forEach((item,i)=>jump.append(el('option',{value:String(i)},`${i+1}. ${item.title}（${item.kind}）`)));
+  jump.dataset.paper=e.id;
+ }
+ jump.value=saved;
+ const hint=q.type==='single'?'請對照官方 PDF 中的題目，從 1～5 選出一個答案。':
+ q.type==='multi'?'請對照官方 PDF，勾選所有正確選項；答案可以有多個。':
+ q.type==='fill'?'請依原卷填入各列的答案，若有多個填答欄位，必須全部填完。':
+ '請在紙上完成演算，這裡可記錄解題步驟；這題不會自動判分。';
+ $('examSingleHint').textContent=`${hint} 題幹、圖表及數學式均以官方 PDF 原題為準。`;
+ if(q.type==='single'||q.type==='multi'){
+  addQuestionRow(box,q.id,q.type);
+ }else if(q.type==='fill'){
+  const keys=q.keys;
+  for(const k of keys){const row=el('div',{class:'fill-row'}),label=el('label',{for:'f-'+k},e.isOld?`第 ${k} 列`:`${k} 列`),select=el('select',{class:'fill-picker',id:'f-'+k,'aria-label':`選填 ${k} 列`});
+   select.append(el('option',{value:''},'尚未作答'));
+   for(const v of ['-','±','0','1','2','3','4','5','6','7','8','9'])select.append(el('option',{value:v},v==='-'?'− 負號':v==='±'?'± 正負號':v));
+   select.value=p.answers['f'+k]||'';
+   select.onchange=()=>writeAns('f'+k,select.value);
+   row.append(label,select);box.append(row);
+  }
+ }else{
+  const label=el('label',{for:'n'+q.id},`${q.title}：解題思路／草稿`),area=el('textarea',{id:'n'+q.id,placeholder:'記下解題步驟、使用的公式或之後要訂正的地方；正式仍請紙筆作答。'});
+  area.value=p.answers['n'+q.id]||'';area.oninput=()=>writeAns('n'+q.id,area.value);box.append(label,area);
+  if(e.rubric)box.append(el('p',{class:'muted tiny'},'非選擇題需人工核對。'),link(e.rubric,'查看官方評分原則 ↗'));
+ }
+ $('examCurrentFeedback').replaceChildren();$('examCurrentFeedback').classList.add('hidden');
+ updateProgress();
+ if(p.status==='submitted'&&p.last&&!$('resultBox').children.length)renderResult(p.last);
+}
+function moveExamQuestion(next){
+ if(!selectedExam)return;
+ const p=loadPaper(selectedExam.id),len=examQuestionList(selectedExam).length;
+ p.questionIndex=Math.min(Math.max(Number(next)||0,0),len-1);
+ save();renderAnswerCard();
+ $('examSinglePanel').scrollIntoView({behavior:'smooth',block:'start'});
+}
+$('examPrevQuestion').onclick=()=>{if(selectedExam)moveExamQuestion(examQuestionIndex(selectedExam)-1)};
+$('examNextQuestion').onclick=()=>{if(selectedExam)moveExamQuestion(examQuestionIndex(selectedExam)+1)};
+$('examJump').onchange=()=>moveExamQuestion(Number($('examJump').value));
+$('examCheckQuestion').onclick=()=>{
+ if(!selectedExam)return;
+ const e=selectedExam,p=loadPaper(e.id),q=examQuestionList(e)[examQuestionIndex(e)],feedback=$('examCurrentFeedback');
+ if(!q)return;
+ feedback.replaceChildren();feedback.classList.remove('hidden','error');
+ if(q.type==='written'){
+  feedback.append(el('strong',{},'此題需人工評閱'),el('div',{},'請參考官方非選擇題評分原則，檢查計算過程與推理步驟。'));
+  if(e.rubric)feedback.append(link(e.rubric,'開啟官方參考答案及評分原則 ↗'));
+  return;
+ }
+ let own='',right='',completed=false;
+ if(q.type==='single'||q.type==='multi'){
+  own=p.answers[q.key]||'';
+  const list=q.type==='single'?e.single:e.multi;
+  const questionNumbers=q.type==='single'?e.singleQuestions:e.multiQuestions;
+  right=list[questionNumbers.indexOf(Number(q.id))]||'';
+  completed=!!own;
+ }else{
+  own=q.keys.map(k=>p.answers['f'+k]||'').join('');right=q.keys.map(k=>e.rows[k]).join('');
+  completed=q.keys.every(k=>p.answers['f'+k]);
+ }
+ if(!completed){feedback.classList.add('error');feedback.append(el('strong',{},'這題尚未填寫完整'),el('div',{},'可以先填完再檢查，或繼續下一題。'));return}
+ const correct=own===right;
+ if(!correct)feedback.classList.add('error');
+ feedback.append(el('strong',{},correct?'✓ 本題答對':'✕ 本題待訂正'),el('div',{},`你的答案：${own}　｜　官方正解：${right}`));
+ feedback.append(el('p',{class:'muted tiny'},'多選題的「全對」判定不是正式部分給分；詳細解題請對照原卷與老師講解。'));
+};
+function expectedCount(e){return examQuestionList(e).length}
+function answeredCount(e,p){return examQuestionList(e).filter(q=>q.type==='fill'?q.keys.every(k=>!!p.answers['f'+k]):q.type==='written'?!!(p.answers[q.key]||'').trim():!!p.answers[q.key]).length}
+function updateProgress(){const e=selectedExam,p=loadPaper(e.id),n=answeredCount(e,p),total=expectedCount(e);$('answerProgress').textContent=`已作答 ${n} / ${total} 題`;$('progressBar').style.width=(100*n/total).toFixed(1)+'%';$('examStatus').textContent=p.status==='submitted'?'已完成核對':'進行中';}
 function grade(e,p){const rows=[];const wrong=[];let perfect=0,objective=e.singleQuestions.length+e.multiQuestions.length+Object.keys(groupKeys(e)).length;
 for(const [i,q] of e.singleQuestions.entries()){const own=p.answers['s'+q]||'',right=e.single[i];const match=own===right;rows.push({q:String(q),type:'單選',own,right,match});if(match)perfect++;else wrong.push(String(q))}
 for(const [i,q] of e.multiQuestions.entries()){const own=p.answers['m'+q]||'',right=e.multi[i];const match=own===right;rows.push({q:String(q),type:'多選',own,right,match});if(match)perfect++;else wrong.push(String(q))}
@@ -168,6 +323,75 @@ byId('topicSelectAll').onclick=()=>{byId('topicTermChecks').querySelectorAll('in
 byId('topicResetWrong').onclick=()=>{if(!confirm('要清除這個單題專區的所有答題紀錄嗎？不會影響歷屆學測整卷紀錄。'))return;answers={};persist();render()};
 function stats(){const records=Object.values(answers);const r=records.filter(x=>x.right).length;byId('topicStats').replaceChildren();for(const [k,v] of [['已練習',records.length+' 題'],['答對',r+' 題'],['待複習',(records.length-r)+' 題'],['正確率',records.length?Math.round(r/records.length*100)+'%':'—']]){const x=mk('div','stat-big');x.append(mk('strong','',v),mk('span','',k));byId('topicStats').append(x)}}
 updatePreviews();start();
+})();
+</script>
+
+<script>
+(()=>{
+ 'use strict';
+ // Q tags are pedagogical third-party classifications, not official CEEC metadata.
+ const tags=[{"exam":"111A","q":1,"topics":[{"term":"高一下","unit":"排列組合與機率"}],"check":"暫定"},{"exam":"111A","q":2,"topics":[{"term":"高一上","unit":"指數、對數"}],"check":"暫定"},{"exam":"111A","q":3,"topics":[{"term":"高一下","unit":"數據分析"}],"check":"暫定"},{"exam":"111A","q":4,"topics":[{"term":"高一下","unit":"數列與級數"}],"check":"暫定"},{"exam":"111A","q":5,"topics":[{"term":"高二下","unit":"機率"}],"check":"暫定"},{"exam":"111A","q":6,"topics":[{"term":"高一上","unit":"直線與圓"}],"check":"暫定"},{"exam":"111A","q":7,"topics":[{"term":"高一上","unit":"數與式"}],"check":"暫定"},{"exam":"111A","q":8,"topics":[{"term":"高一下","unit":"三角比"}],"check":"暫定"},{"exam":"111A","q":9,"topics":[{"term":"高二上","unit":"平面向量"}],"check":"暫定"},{"exam":"111A","q":10,"topics":[{"term":"高一上","unit":"多項式函數"}],"check":"暫定"},{"exam":"111A","q":11,"topics":[{"term":"高二下","unit":"空間向量"}],"check":"暫定"},{"exam":"111A","q":12,"topics":[{"term":"高一上","unit":"多項式函數"}],"check":"暫定"},{"exam":"111A","q":13,"topics":[{"term":"高二下","unit":"機率"}],"check":"暫定"},{"exam":"111A","q":14,"topics":[{"term":"高二下","unit":"矩陣"}],"check":"暫定"},{"exam":"111A","q":15,"topics":[{"term":"高一下","unit":"三角比"}],"check":"暫定"},{"exam":"111A","q":16,"topics":[{"term":"高二下","unit":"空間中的平面與直線"}],"check":"暫定"},{"exam":"111A","q":17,"topics":[{"term":"高二下","unit":"空間向量"}],"check":"暫定"},{"exam":"111A","q":18,"topics":[{"term":"高一上","unit":"直線與圓"}],"check":"暫定"},{"exam":"112A","q":1,"topics":[{"term":"高一上","unit":"指數、對數"}],"check":"教學對照"},{"exam":"112A","q":2,"topics":[{"term":"高一下","unit":"三角比"}],"check":"教學對照"},{"exam":"112A","q":3,"topics":[{"term":"高一上","unit":"指數、對數"},{"term":"高一下","unit":"數據分析"}],"check":"教學對照"},{"exam":"112A","q":4,"topics":[{"term":"高一下","unit":"排列組合與機率"}],"check":"教學對照"},{"exam":"112A","q":5,"topics":[{"term":"高二下","unit":"空間向量"}],"check":"教學對照"},{"exam":"112A","q":6,"topics":[{"term":"高一下","unit":"排列組合與機率"},{"term":"高二下","unit":"空間向量"}],"check":"教學對照"},{"exam":"112A","q":7,"topics":[{"term":"高一下","unit":"數列與級數"}],"check":"教學對照"},{"exam":"112A","q":8,"topics":[{"term":"高二下","unit":"機率"}],"check":"教學對照"},{"exam":"112A","q":9,"topics":[{"term":"高一下","unit":"數列與級數"},{"term":"高二上","unit":"指數與對數函數"}],"check":"教學對照"},{"exam":"112A","q":10,"topics":[{"term":"高一上","unit":"直線與圓"}],"check":"教學對照"},{"exam":"112A","q":11,"topics":[{"term":"高二下","unit":"矩陣"}],"check":"教學對照"},{"exam":"112A","q":12,"topics":[{"term":"高二上","unit":"三角函數"}],"check":"教學對照"},{"exam":"112A","q":13,"topics":[{"term":"高二下","unit":"矩陣"}],"check":"教學對照"},{"exam":"112A","q":14,"topics":[{"term":"高一上","unit":"多項式函數"}],"check":"教學對照"},{"exam":"112A","q":15,"topics":[{"term":"高二上","unit":"平面向量"}],"check":"教學對照"},{"exam":"112A","q":16,"topics":[{"term":"高二下","unit":"空間向量"},{"term":"高二下","unit":"空間中的平面與直線"}],"check":"教學對照"},{"exam":"112A","q":17,"topics":[{"term":"高二下","unit":"空間中的平面與直線"}],"check":"教學對照"},{"exam":"112A","q":18,"topics":[{"term":"高一下","unit":"三角比"}],"check":"教學對照"},{"exam":"113A","q":1,"topics":[{"term":"高一上","unit":"指數、對數"},{"term":"高二上","unit":"指數與對數函數"}],"check":"教學對照"},{"exam":"113A","q":2,"topics":[{"term":"高二下","unit":"空間向量"}],"check":"教學對照"},{"exam":"113A","q":3,"topics":[{"term":"高一上","unit":"多項式函數"},{"term":"高一下","unit":"數列與級數"}],"check":"教學對照"},{"exam":"113A","q":4,"topics":[{"term":"高二上","unit":"三角函數"}],"check":"教學對照"},{"exam":"113A","q":5,"topics":[{"term":"高一下","unit":"數據分析"},{"term":"高一下","unit":"排列組合與機率"}],"check":"教學對照"},{"exam":"113A","q":6,"topics":[{"term":"高一下","unit":"三角比"},{"term":"高二上","unit":"三角函數"}],"check":"教學對照"},{"exam":"113A","q":7,"topics":[{"term":"高二上","unit":"指數與對數函數"}],"check":"教學對照"},{"exam":"113A","q":8,"topics":[{"term":"高一下","unit":"數列與級數"},{"term":"高一下","unit":"三角比"}],"check":"教學對照"},{"exam":"113A","q":9,"topics":[{"term":"高一上","unit":"直線與圓"},{"term":"高一下","unit":"數據分析"}],"check":"教學對照"},{"exam":"113A","q":10,"topics":[{"term":"高二上","unit":"平面向量"}],"check":"教學對照"},{"exam":"113A","q":11,"topics":[{"term":"高一下","unit":"排列組合與機率"},{"term":"高二上","unit":"平面向量"},{"term":"高二下","unit":"機率"}],"check":"教學對照"},{"exam":"113A","q":12,"topics":[{"term":"高二下","unit":"矩陣"}],"check":"教學對照"},{"exam":"113A","q":13,"topics":[{"term":"高二下","unit":"矩陣"}],"check":"教學對照"},{"exam":"113A","q":14,"topics":[{"term":"高一上","unit":"多項式函數"}],"check":"教學對照"},{"exam":"113A","q":15,"topics":[{"term":"高一下","unit":"排列組合與機率"}],"check":"教學對照"},{"exam":"113A","q":16,"topics":[{"term":"高二上","unit":"平面向量"}],"check":"教學對照"},{"exam":"113A","q":17,"topics":[{"term":"高一上","unit":"直線與圓"}],"check":"教學對照"},{"exam":"113A","q":18,"topics":[{"term":"高二下","unit":"空間向量"},{"term":"高二下","unit":"空間中的平面與直線"}],"check":"教學對照"},{"exam":"114A","q":1,"topics":[{"term":"高二下","unit":"機率"}],"check":"教學對照"},{"exam":"114A","q":2,"topics":[{"term":"高一上","unit":"直線與圓"}],"check":"教學對照"},{"exam":"114A","q":3,"topics":[{"term":"高一下","unit":"排列組合與機率"}],"check":"教學對照"},{"exam":"114A","q":4,"topics":[{"term":"高二上","unit":"指數與對數函數"}],"check":"教學對照"},{"exam":"114A","q":5,"topics":[{"term":"高二上","unit":"三角函數"}],"check":"教學對照"},{"exam":"114A","q":6,"topics":[{"term":"高二下","unit":"空間向量"}],"check":"教學對照"},{"exam":"114A","q":7,"topics":[{"term":"高一下","unit":"數列與級數"}],"check":"教學對照"},{"exam":"114A","q":8,"topics":[{"term":"高一上","unit":"指數、對數"},{"term":"高一上","unit":"直線與圓"}],"check":"教學對照"},{"exam":"114A","q":9,"topics":[{"term":"高一上","unit":"多項式函數"}],"check":"教學對照"},{"exam":"114A","q":10,"topics":[{"term":"高二上","unit":"三角函數"}],"check":"教學對照"},{"exam":"114A","q":11,"topics":[{"term":"高一下","unit":"三角比"},{"term":"高二上","unit":"平面向量"}],"check":"教學對照"},{"exam":"114A","q":12,"topics":[{"term":"高一下","unit":"數據分析"}],"check":"教學對照"},{"exam":"114A","q":13,"topics":[{"term":"高一上","unit":"多項式函數"}],"check":"教學對照"},{"exam":"114A","q":14,"topics":[{"term":"高二下","unit":"空間中的平面與直線"},{"term":"高二下","unit":"矩陣"}],"check":"教學對照"},{"exam":"114A","q":15,"topics":[{"term":"高二下","unit":"機率"}],"check":"教學對照"},{"exam":"114A","q":16,"topics":[{"term":"高一上","unit":"直線與圓"}],"check":"教學對照"},{"exam":"114A","q":17,"topics":[{"term":"高一下","unit":"三角比"},{"term":"高二上","unit":"三角函數"}],"check":"教學對照"},{"exam":"114A","q":18,"topics":[{"term":"高二下","unit":"矩陣"}],"check":"教學對照"},{"exam":"115A","q":1,"topics":[{"term":"高二下","unit":"機率"}],"check":"暫定"},{"exam":"115A","q":2,"topics":[{"term":"高一上","unit":"數與式"}],"check":"暫定"},{"exam":"115A","q":3,"topics":[{"term":"高一上","unit":"指數、對數"},{"term":"高一下","unit":"數列與級數"}],"check":"暫定"},{"exam":"115A","q":4,"topics":[{"term":"高一下","unit":"排列組合與機率"}],"check":"暫定"},{"exam":"115A","q":5,"topics":[{"term":"高二下","unit":"矩陣"}],"check":"暫定"},{"exam":"115A","q":6,"topics":[{"term":"高一上","unit":"直線與圓"}],"check":"暫定"},{"exam":"115A","q":7,"topics":[{"term":"高一上","unit":"直線與圓"}],"check":"暫定"},{"exam":"115A","q":8,"topics":[{"term":"高二下","unit":"矩陣"}],"check":"暫定"},{"exam":"115A","q":9,"topics":[{"term":"高一下","unit":"數據分析"}],"check":"暫定"},{"exam":"115A","q":10,"topics":[{"term":"高二上","unit":"平面向量"}],"check":"暫定"},{"exam":"115A","q":11,"topics":[{"term":"高二上","unit":"三角函數"}],"check":"暫定"},{"exam":"115A","q":12,"topics":[{"term":"高一上","unit":"多項式函數"}],"check":"暫定"},{"exam":"115A","q":13,"topics":[{"term":"高二下","unit":"機率"}],"check":"暫定"},{"exam":"115A","q":14,"topics":[{"term":"高二上","unit":"平面向量"}],"check":"暫定"},{"exam":"115A","q":15,"topics":[{"term":"高一上","unit":"指數、對數"},{"term":"高一下","unit":"數列與級數"}],"check":"暫定"},{"exam":"115A","q":16,"topics":[{"term":"高一上","unit":"多項式函數"}],"check":"暫定"},{"exam":"115A","q":17,"topics":[{"term":"高一下","unit":"三角比"}],"check":"暫定"},{"exam":"115A","q":18,"topics":[{"term":"高二下","unit":"空間向量"}],"check":"暫定"}];
+ const exams=[{"id":"115A","year":115,"subject":"數學A","paper":"https://www.ceec.edu.tw/files/file_pool/1/0q054344158947111283/03-115%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E8%A9%A6%E5%8D%B7.pdf","answer":"https://www.ceec.edu.tw/files/file_pool/1/0q040592802409726233/03-115%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E7%AD%94%E6%A1%88.pdf","rubric":"https://www.ceec.edu.tw/files/file_pool/1/0q054335289912664889/115%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E8%80%83%E7%A7%91%E9%9D%9E%E9%81%B8%E6%93%87%E9%A1%8C%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88%E8%88%87%E8%A9%95%E5%88%86%E5%8E%9F%E5%89%87.pdf","single":["2","1","1","3","5","2"],"multi":["34","25","124","15","24","24"],"fill":null,"isOld":false,"singleQuestions":[1,2,3,4,5,6],"multiQuestions":[7,8,9,10,11,12],"rows":{"13-1":"9","13-2":"1","13-3":"0","14-1":"1","14-2":"4","15-1":"3","15-2":"2","16-1":"3","16-2":"5","16-3":"2","17-1":"3","17-2":"1","17-3":"1","18-1":"3"},"nonChoice":[19,20],"count":20},{"id":"114A","year":114,"subject":"數學A","paper":"https://www.ceec.edu.tw/files/file_pool/1/0p056503510203248955/03-114%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E8%A9%A6%E9%A1%8C.pdf","answer":"https://www.ceec.edu.tw/files/file_pool/1/0p051544393000727284/03-114%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E7%AD%94%E6%A1%88.pdf","rubric":"https://www.ceec.edu.tw/files/file_pool/1/0p055379013856943041/04-114%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E8%80%83%E7%A7%91%E9%9D%9E%E9%81%B8%E6%93%87%E9%A1%8C%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88%E8%88%87%E8%A9%95%E5%88%86%E5%8E%9F%E5%89%87.pdf","single":["5","2","4","3","1","3"],"multi":["24","35","245","145","345","1345"],"fill":null,"isOld":false,"singleQuestions":[1,2,3,4,5,6],"multiQuestions":[7,8,9,10,11,12],"rows":{"13-1":"-","13-2":"6","13-3":"3","14-1":"-","14-2":"1","14-3":"1","15-1":"4","15-2":"0","15-3":"5","16-1":"2","16-2":"4","16-3":"5","17-1":"3","17-2":"2","18-1":"2"},"nonChoice":[19,20],"count":20},{"id":"113A","year":113,"subject":"數學A","paper":"https://www.ceec.edu.tw/files/file_pool/1/0o051426180137211766/03-113%E5%AD%B8%E6%B8%AC%E6%95%B8a%E8%A9%A6%E9%A1%8C%E5%AE%9A%E7%A8%BF.pdf","answer":"https://www.ceec.edu.tw/files/file_pool/1/0o051426632950938748/03-113%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E7%AD%94%E6%A1%88.pdf","rubric":"https://www.ceec.edu.tw/files/file_pool/1/0o051426762594817766/04-113%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E8%80%83%E7%A7%91%E9%9D%9E%E9%81%B8%E6%93%87%E9%A1%8C%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88%E8%88%87%E8%A9%95%E5%88%86%E5%8E%9F%E5%89%87.pdf","single":["2","5","1","2","4","3"],"multi":["34","23","3","35","23","245"],"fill":null,"isOld":false,"singleQuestions":[1,2,3,4,5,6],"multiQuestions":[7,8,9,10,11,12],"rows":{"13-1":"2","13-2":"3","13-3":"5","14-1":"-","14-2":"3","14-3":"3","15-1":"2","15-2":"5","16-1":"2","16-2":"5","16-3":"5","17-1":"1","17-2":"3","18-1":"4"},"nonChoice":[19,20],"count":20},{"id":"112A","year":112,"subject":"數學A","paper":"https://www.ceec.edu.tw/files/file_pool/1/0n045358375872115148/03-112%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E8%A9%A6%E5%8D%B7.pdf","answer":"https://www.ceec.edu.tw/files/file_pool/1/0n045358876595832120/03-112%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E9%81%B8%E6%93%87(%E5%A1%AB)%E9%A1%8C%E7%AD%94%E6%A1%88.pdf","rubric":"https://www.ceec.edu.tw/files/file_pool/1/0n049421028143125535/04-112%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E9%9D%9E%E9%81%B8%E6%93%87%E9%A1%8C%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88%E8%88%87%E8%A9%95%E5%88%86%E5%8E%9F%E5%89%87.pdf","single":["4","5","4","1","2","3"],"multi":["35","14","35","135","25","15"],"fill":null,"isOld":false,"singleQuestions":[1,2,3,4,5,6],"multiQuestions":[7,8,9,10,11,12],"rows":{"13-1":"8","13-2":"0","14-1":"3","14-2":"-","14-3":"9","15-1":"3","15-2":"4","16-1":"2","16-2":"2","17-1":"5","17-2":"2","18-1":"4"},"nonChoice":[19,20],"count":20},{"id":"111A","year":111,"subject":"數學A","paper":"https://www.ceec.edu.tw/files/file_pool/1/0m052633042401295651/03-111%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E8%A9%A6%E5%8D%B7%E5%AE%9A%E7%A8%BF.pdf","answer":"https://www.ceec.edu.tw/files/file_pool/1/0m053361187672613478/03-111%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E9%81%B8%E6%93%87(%E5%A1%AB)%E9%A1%8C%E7%AD%94%E6%A1%88.pdf","rubric":"https://www.ceec.edu.tw/files/file_pool/1/0m053361096038734441/03-111%E5%AD%B8%E6%B8%AC%E6%95%B8%E5%AD%B8a%E9%9D%9E%E9%81%B8%E6%93%87%E9%A1%8C%E8%A9%95%E5%88%86%E5%8E%9F%E5%89%87.pdf","single":["4","1","5","3","2","5"],"multi":["24","14","34","12","234","12"],"fill":null,"isOld":false,"singleQuestions":[1,2,3,4,5,6],"multiQuestions":[7,8,9,10,11,12],"rows":{"13-1":"4","13-2":"2","14-1":"2","14-2":"1","14-3":"2","15-1":"1","15-2":"9","15-3":"2","16-1":"-","16-2":"3","16-3":"-","16-4":"2","16-5":"5","17-1":"2","17-2":"1","18-1":"4"},"nonChoice":[19,20],"count":20}];
+ const by=id=>document.getElementById(id), TERMS=['高一上','高一下','高二上','高二下'];
+ const ORDER=['數與式','指數、對數','多項式函數','直線與圓','數列與級數','數據分析','排列組合與機率','三角比','三角函數','指數與對數函數','平面向量','空間向量','空間中的平面與直線','機率','矩陣'];
+ const cacheKey='gsat_math_unit_questions_v1';let saved={};try{saved=JSON.parse(localStorage.getItem(cacheKey)||'{}')}catch{};
+ const persist=()=>{try{localStorage.setItem(cacheKey,JSON.stringify(saved))}catch{}};
+ const make=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e};
+ let working=[],pos=0,prevPdf='',viewPdf=false;
+ const available=(t)=>[...new Set(tags.flatMap(x=>x.topics).filter(x=>t.includes(x.term)).map(x=>x.unit))].sort((a,b)=>ORDER.indexOf(a)-ORDER.indexOf(b));
+ const checked=id=>[...by(id).querySelectorAll('input:checked')].map(x=>x.value);
+ function checkboxes(id,values,selected,change){const box=by(id);box.replaceChildren();values.forEach(v=>{const label=make('label','unit-check'),input=make('input');input.type='checkbox';input.value=v;input.checked=selected.includes(v);input.addEventListener('change',change);label.append(input,make('span','',v));box.append(label)})}
+ function refreshUnits(){const prev=checked('unitTopics'), units=available(checked('unitTerms'));checkboxes('unitTopics',units,prev.filter(v=>units.includes(v)),preview);preview()}
+ const yearSel=by('unitYear'),sortSel=by('unitOrder');
+ checkboxes('unitTerms',TERMS,['高二上'],refreshUnits);
+ refreshUnits();
+ // Start with the most useful high-2 math A chapter as a concrete example.
+ [...by('unitTopics').querySelectorAll('input')].forEach(x=>{x.checked=x.value==='平面向量'});
+ yearSel.onchange=sortSel.onchange=preview;
+ function filtered(){const terms=checked('unitTerms'),units=checked('unitTopics'),year=yearSel.value,wrong=sortSel.value==='wrong';return tags.filter(q=>q.topics.some(t=>terms.includes(t.term)&&(!units.length||units.includes(t.unit)))&&(year==='all'||q.exam===year+'A')&&(!wrong||saved[q.exam+':'+q.q]?.correct===false))}
+ function preview(){const n=filtered().length;by('unitTotal').textContent=`符合 ${n} 題（已分類 ${tags.length} 個原卷題號）`;}
+ function start(){working=filtered();if(sortSel.value==='random'){for(let i=working.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[working[i],working[j]]=[working[j],working[i]]}}else working.sort((a,b)=>Number(a.exam.slice(0,-1))-Number(b.exam.slice(0,-1))||a.q-b.q);pos=0;render()}
+ function groupFill(e,n){return Object.keys(e.rows||{}).filter(x=>x.startsWith(n+'-')).sort((a,b)=>Number(a.split('-')[1])-Number(b.split('-')[1]))}
+ function answerMeta(e,n){const si=e.singleQuestions?.indexOf(n)??-1, mi=e.multiQuestions?.indexOf(n)??-1;
+  if(si>=0)return {type:'single',answer:e.single[si],fields:[]};
+  if(mi>=0)return {type:'multi',answer:e.multi[mi],fields:[]};
+  const fields=groupFill(e,n);if(fields.length)return {type:'fill',fields,answer:fields.map(x=>String(e.rows[x]))};
+  return null;
+ }
+ let current=null;
+ function showResult(q,meta,values,correct,prior=false){const f=by('unitFeedback');f.className='unit-feedback'+(correct?'':' incorrect');const ans=meta.type==='fill'?meta.answer.join('、'):'ABCDE'.includes(String(meta.answer))&&meta.type==='single'?'ABCDE'[Number(meta.answer)-1]:meta.type==='multi'?[...String(meta.answer)].map(x=>'ABCDE'[Number(x)-1]).join('、'):String(meta.answer);
+  f.replaceChildren(make('strong','',`${correct?'✓ 答對':'✕ 需要複習'}｜參考答案：${ans}`),make('p','',meta.type==='multi'?'多選題必須全部選項相符才算正確；本站沒有套用正式部分給分。':meta.type==='fill'?'選填題須每個答題格皆正確，才視為整題完全答對。':'此為大考中心參考答案，請再回原題確認解法。'));
+  if(prior)f.append(make('p','muted tiny','上次作答紀錄；可重新作答並更新。'));
+ }
+ function render(){const q=working[pos];by('unitInputs').replaceChildren();by('unitFeedback').className='hidden unit-feedback';by('unitFeedback').replaceChildren();by('unitPrev').disabled=pos===0;by('unitNext').disabled=pos>=working.length-1;by('unitGrade').disabled=!q;by('unitSkip').disabled=!q;
+  if(!q){current=null;by('unitQuestionTitle').textContent='沒有符合條件的已分類題目。';by('unitMeta').textContent='調整學期、單元、年度或取消「只練錯題」，再按開始抽題。';by('unitProgress').textContent='0 題';by('unitBadge').textContent='';by('unitPaperLink').removeAttribute('href');by('unitAnswerLink').removeAttribute('href');updateStats();return}
+  const e=exams.find(v=>v.id===q.exam),meta=answerMeta(e,q.q);current={q,e,meta};
+  if(!meta){by('unitQuestionTitle').textContent='答案欄位尚未校對';by('unitGrade').disabled=true;by('unitSkip').disabled=true;return}
+  by('unitProgress').textContent=`第 ${pos+1} / ${working.length} 題`;
+  const type=meta.type==='single'?'單選':meta.type==='multi'?'多選':'選填';by('unitQuestionTitle').textContent=`${e.year} 學測 ${e.subject} · 第 ${q.q} 題（${type}）`;
+  by('unitMeta').textContent='請閱讀右側官方 PDF 的第 '+q.q+' 題，再於下方填寫答案。';
+  by('unitBadge').textContent=q.topics.map(t=>t.term+'／'+t.unit).join(' · ');
+  by('unitConfidence').textContent=q.check==='暫定'?'單元暫定・待核對':'第三方教學單元';
+  if(meta.type==='single'||meta.type==='multi'){
+    const last=meta.type==='single'?5:5;for(let i=1;i<=last;i++){
+      const l=make('label','unit-choice'),v=make('input');v.type=meta.type==='single'?'radio':'checkbox';v.name='unitChoice';v.value=String(i);l.append(v,make('span','',`選項 ${'ABCDE'[i-1]}（原卷第 ${i} 個選項）`));by('unitInputs').append(l)
+    }
+  }else meta.fields.forEach(f=>{const l=make('label','unit-input',`第 ${f.split('-')[0]} 題・第 ${f.split('-')[1]} 格：`),v=make('input');v.type='text';v.autocomplete='off';v.maxLength=3;v.setAttribute('aria-label',f+' 答題格');v.dataset.key=f;l.append(v);by('unitInputs').append(l)});
+  by('unitPaperLink').href=e.paper;by('unitAnswerLink').href=e.answer;
+  by('unitPDFText').textContent=`${e.year} 學測數學 A 原卷第 ${q.q} 題｜請以原始圖形和公式為準`;
+  if(viewPdf){by('unitPdf').classList.remove('hidden');if(prevPdf!==e.paper){by('unitPdf').src=e.paper;prevPdf=e.paper}}else{by('unitPdf').classList.add('hidden')}
+  const prior=saved[q.exam+':'+q.q];if(prior){showResult(q,meta,prior.values,prior.correct,true)}
+  updateStats()
+ }
+ function getResponse(meta){if(meta.type==='single')return [...by('unitInputs').querySelectorAll('input:checked')].map(x=>x.value).join('');if(meta.type==='multi')return [...by('unitInputs').querySelectorAll('input:checked')].map(x=>x.value).sort().join('');return [...by('unitInputs').querySelectorAll('input[data-key]')].map(x=>x.value.trim().replace('−','-'))}
+ function grade(reveal){if(!current)return;const {q,meta}=current;const vals=getResponse(meta);if(!reveal&&(meta.type==='fill'?vals.some(x=>!x):!vals)){alert('請先作答；不會可選「顯示答案」。');return}
+ const correct=!reveal&&(meta.type==='fill'?vals.every((v,i)=>v===meta.answer[i]):String(vals)===String(meta.answer));saved[q.exam+':'+q.q]={values:vals,correct,ts:Date.now()};persist();showResult(q,meta,vals,correct);updateStats()}
+ function updateStats(){const entries=Object.values(saved);const c=entries.filter(x=>x.correct).length;const s=by('unitSummary');s.replaceChildren(make('h4','',`單元練習紀錄`),make('span','chip',`已練 ${entries.length} 題`),make('span','chip',`答對 ${c} 題`),make('span','chip',`待複習 ${entries.length-c} 題`));}
+ by('unitStart').onclick=start;by('unitGrade').onclick=()=>grade(false);by('unitSkip').onclick=()=>grade(true);
+ by('unitPrev').onclick=()=>{if(pos>0){pos--;render()}};by('unitNext').onclick=()=>{if(pos<working.length-1){pos++;render()}};
+ by('unitCheckAll').onclick=()=>{by('unitTerms').querySelectorAll('input').forEach(x=>x.checked=true);refreshUnits()};
+ by('unitTogglePdf').onclick=()=>{viewPdf=!viewPdf;if(viewPdf&&current&&prevPdf!==current.e.paper){by('unitPdf').src=current.e.paper;prevPdf=current.e.paper}by('unitPdf').classList.toggle('hidden',!viewPdf)};
+ preview();start();
 })();
 </script>
 </body></html>
